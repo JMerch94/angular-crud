@@ -10,7 +10,7 @@ export const environment = {
     authDomain: "angular-crud-3728f.firebaseapp.com",
     databaseURL: "https://angular-crud-3728f.firebaseio.com",
     projectId: "angular-crud-3728f",
-    storageBucket: "",
+    storageBucket: "angular-crud-3728f.appspot.com",
     messagingSenderId: "753058439540"
   }
 };
