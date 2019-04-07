@@ -11,7 +11,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class EmployeeComponent implements OnInit {
 
-  constructor(private service: EmployeeService,
+  constructor(public service: EmployeeService,
     private firestore: AngularFirestore,
     private toastr: ToastrService) { }
 
@@ -39,6 +39,6 @@ export class EmployeeComponent implements OnInit {
     else
       this.firestore.doc('employees/' + form.value.id).update(data);
       this.resetForm(form);
-      this.toastr.success('Submitted successfully', 'EMP. Register');
+      this.toastr.success('Submitted successfully but security rules prevented writing to Firestore', 'EMP. Register');
   }
 }

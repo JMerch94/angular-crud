@@ -34,7 +34,7 @@ export class EmployeeListComponent implements OnInit {
   onDelete(id: string) {
     if (confirm("Are you sure to delete this record?")) {
       this.firestore.doc('employees/' + id).delete();
-      this.toastr.warning('Deleted successfully','EMP. Register');
+      this.toastr.warning('Delete request submitted successfully but Firestore security rules prevented the removal of data','EMP. Register');
     }
   }
  
